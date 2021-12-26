@@ -24,3 +24,9 @@ function adicionarCorDeFundo(event) {
 }
 
 listaTarefas.addEventListener('click', adicionarCorDeFundo);
+
+function concluirTarefa(event) {
+  event.target.classList.toggle('completed');
+}
+
+listaTarefas.addEventListener('dblclick', concluirTarefa);
