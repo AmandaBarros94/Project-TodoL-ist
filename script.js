@@ -7,13 +7,20 @@ function adicionarItem() {
 
   listaTarefas.appendChild(tarefa);
   tarefa.innerText = textoTarefa.value;
-  textoTarefa.value = "";
+  textoTarefa.value = '';
 }
 
 botaoTarefa.addEventListener('click', adicionarItem);
 
-function adicionarBackground(event) {
+function removerCorDeFundo() {
+  for (let index = 0; index < listaTarefas.children.length; index += 1) {
+    listaTarefas.children[index].classList.remove('selected');
+  }
+}
+
+function adicionarCorDeFundo(event) {
+  removerCorDeFundo();
   event.target.classList.toggle('selected');
 }
 
-listaTarefas.addEventListener('click', adicionarBackground);
+listaTarefas.addEventListener('click', adicionarCorDeFundo);
