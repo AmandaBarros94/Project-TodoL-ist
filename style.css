@@ -1,7 +1,14 @@
 .selected {
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(128 , 128 , 128 , 0.99);
 }
 
 .completed {
-  text-decoration: line-through solid rgb(0, 0, 0);
+  text-decoration: line-through solid rgb(0 , 0 , 0.99);
+}
+
+body {
+  background: no-repeat url('./img-list.jpg');
+  background-size: 100vw 100vh;
+  text-align: center;
+  font-size: 25px;
 }
